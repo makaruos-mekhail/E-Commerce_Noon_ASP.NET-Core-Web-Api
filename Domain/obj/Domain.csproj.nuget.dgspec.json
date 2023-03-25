@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\Domain\\Domain.csproj": {}
+    "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\Domain\\Domain.csproj": {
+    "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\Domain\\Domain.csproj",
+        "projectUniqueName": "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\MSleim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\Domain\\obj\\",
+        "projectPath": "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Fatima\\.nuget\\packages\\",
+        "outputPath": "F:\\E-Commerce_Api_new\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSleim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Fatima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

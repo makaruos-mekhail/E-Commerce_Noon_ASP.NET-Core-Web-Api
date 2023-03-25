@@ -14,11 +14,11 @@ namespace Context
             modelBuilder.Entity<Product>()
 				.HasOne(p => p.Brand);
 
-            modelBuilder.Entity<Product>()
-				.HasMany(p => p.ProductColors)
-				.WithOne(pc => pc.Product)
-                .HasForeignKey(a => a.ProductId)
-				.OnDelete(DeleteBehavior.NoAction);
+    //        modelBuilder.Entity<Product>()
+				//.HasMany(p => p.ProductColors)
+				//.WithOne(pc => pc.Product)
+    //            .HasForeignKey(a => a.ProductId)
+				//.OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Product>()
                 .HasMany(p => p.ProductImages)
@@ -80,10 +80,10 @@ namespace Context
 				.HasOne(oi => oi.Order);
 
             /// ProductColor Relations
-            modelBuilder.Entity<ProductColor>()
-                .HasOne(a => a.Product)
-                .WithMany(b => b.ProductColors)
-				.OnDelete(DeleteBehavior.NoAction);
+    //        modelBuilder.Entity<ProductColor>()
+    //            .HasOne(a => a.Product)
+    //            .WithMany(b => b.ProductColors)
+				//.OnDelete(DeleteBehavior.NoAction);
 
             /// WhishList Relations
             modelBuilder.Entity<WishList>()
