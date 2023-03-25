@@ -7,16 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ProductImages\" />
-    <Folder Include="Brand\" />
-    <Folder Include="Order\" />
-    <Folder Include="WishList\" />
-    <Folder Include="OrderDetails\" />
-    <Folder Include="Category\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="7.0.4" />
   </ItemGroup>
 
 </Project>
