@@ -10,6 +10,7 @@
 
 		public string HexValue { get; protected set; }
 
-		public virtual Product Product { get; protected set; }
+		public virtual ICollection<Product> Products { get; protected set; }
+		//public virtual Product Product { get; protected set; }
 	}
 }

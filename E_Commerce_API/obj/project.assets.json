@@ -1321,6 +1321,19 @@
           }
         }
       },
+      "Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Application.dll": {}
+        }
+      },
       "Context/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1350,6 +1363,20 @@
         },
         "runtime": {
           "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "Reposatory/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Application": "1.0.0",
+          "Context": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Reposatory.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Reposatory.dll": {}
         }
       }
     }
@@ -4104,6 +4131,11 @@
         "version.txt"
       ]
     },
+    "Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
+    },
     "Context/1.0.0": {
       "type": "project",
       "path": "../Context/Context.csproj",
@@ -4113,10 +4145,16 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Reposatory/1.0.0": {
+      "type": "project",
+      "path": "../Reposatory/Reposatory.csproj",
+      "msbuildProject": "../Reposatory/Reposatory.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Application >= 1.0.0",
       "Context >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.4",
@@ -4124,23 +4162,24 @@
       "Microsoft.EntityFrameworkCore.Relational >= 7.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.4",
+      "Reposatory >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MSleim\\.nuget\\packages\\": {}
+    "C:\\Users\\Fatima\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\E_Commerce_API\\E_Commerce_API.csproj",
+      "projectUniqueName": "F:\\E-Commerce_Api_new\\E_Commerce_API\\E_Commerce_API.csproj",
       "projectName": "E_Commerce_API",
-      "projectPath": "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\E_Commerce_API\\E_Commerce_API.csproj",
-      "packagesPath": "C:\\Users\\MSleim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\E_Commerce_API\\obj\\",
+      "projectPath": "F:\\E-Commerce_Api_new\\E_Commerce_API\\E_Commerce_API.csproj",
+      "packagesPath": "C:\\Users\\Fatima\\.nuget\\packages\\",
+      "outputPath": "F:\\E-Commerce_Api_new\\E_Commerce_API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MSleim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Fatima\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4154,8 +4193,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\Context\\Context.csproj": {
-              "projectPath": "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\Context\\Context.csproj"
+            "F:\\E-Commerce_Api_new\\Application\\Application.csproj": {
+              "projectPath": "F:\\E-Commerce_Api_new\\Application\\Application.csproj"
+            },
+            "F:\\E-Commerce_Api_new\\Context\\Context.csproj": {
+              "projectPath": "F:\\E-Commerce_Api_new\\Context\\Context.csproj"
+            },
+            "F:\\E-Commerce_Api_new\\Reposatory\\Reposatory.csproj": {
+              "projectPath": "F:\\E-Commerce_Api_new\\Reposatory\\Reposatory.csproj"
             }
           }
         }
@@ -4222,7 +4267,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

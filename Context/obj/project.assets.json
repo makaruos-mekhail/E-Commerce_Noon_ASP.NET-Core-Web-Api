@@ -3657,19 +3657,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MSleim\\.nuget\\packages\\": {}
+    "C:\\Users\\Fatima\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\Context\\Context.csproj",
+      "projectUniqueName": "F:\\E-Commerce_Api_new\\Context\\Context.csproj",
       "projectName": "Context",
-      "projectPath": "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\Context\\Context.csproj",
-      "packagesPath": "C:\\Users\\MSleim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\Context\\obj\\",
+      "projectPath": "F:\\E-Commerce_Api_new\\Context\\Context.csproj",
+      "packagesPath": "C:\\Users\\Fatima\\.nuget\\packages\\",
+      "outputPath": "F:\\E-Commerce_Api_new\\Context\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MSleim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Fatima\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3683,8 +3683,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\MSleim\\Downloads\\E-Commerce_Api\\E-Commerce_Api\\Domain\\Domain.csproj"
+            "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj": {
+              "projectPath": "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj"
             }
           }
         }
@@ -3738,7 +3738,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
