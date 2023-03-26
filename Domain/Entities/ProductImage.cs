@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace Domain.Entities
+﻿namespace Domain.Entities
 {
     public class ProductImage
     {
@@ -8,8 +6,8 @@ namespace Domain.Entities
 
         public string ImagePath { get; set; }
 
-        public long? ProductId { get; set; }
-        
+        public long ProductId { get; set; }
+
         public virtual Product Product { get; set; }
 
     }

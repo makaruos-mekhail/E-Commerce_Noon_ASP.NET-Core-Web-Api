@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Domain.Entities
 {
-	public class User : IdentityUser
+	public class User : IdentityUser<long>
 	{
-		public string FirstName { get; protected set; }
+        public string FirstName { get; protected set; }
 
 		public string FirstNameAr { get; protected set; }
 
@@ -35,13 +35,13 @@ namespace Domain.Entities
 
 		public UserType Type { get; protected set; }
 
-		public virtual ICollection<Order> Orders { get; protected set; }
+		public virtual ICollection<Order>? Orders { get; protected set; }
 
-		public virtual ICollection<ProductReview> Reviews { get; protected set; }
+		public virtual ICollection<ProductReview>? Reviews { get; protected set; }
 
-		public virtual WishList WishList { get; protected set; }
+		public virtual WishList? WishList { get; protected set; }
 
-		public long WishListId { get; protected set; }
+		//public long? WishListId { get; protected set; }
 
 	}
 }

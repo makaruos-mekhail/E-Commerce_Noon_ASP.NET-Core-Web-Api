@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata;
 
 namespace Context
 {
@@ -86,15 +87,15 @@ namespace Context
 				//.OnDelete(DeleteBehavior.NoAction);
 
             /// WhishList Relations
-            modelBuilder.Entity<WishList>()
-                .HasOne(w => w.User);
+            //modelBuilder.Entity<WishList>()
+            //    .HasOne(w => w.User);
 
 
             modelBuilder.Entity<WishList>()
 				.HasMany(w => w.Products)
 				.WithOne(p => p.WishList)
-				.HasForeignKey(p => p.WishListId)
-				.OnDelete(DeleteBehavior.NoAction);
+                .HasForeignKey(p => p.WishListId)
+                .OnDelete(DeleteBehavior.NoAction);
 
 			/// ProductReview Relations
              modelBuilder.Entity<ProductReview>()
@@ -113,11 +114,16 @@ namespace Context
                 .WithOne(r => r.User)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            //modelBuilder.Entity<User>()
+            //    .HasOne(u => u.WishList)
+            //    .WithOne(u => u.User)
+            //    //.HasForeignKey<us>(e => e.UserId)
+            //    .OnDelete(DeleteBehavior.Cascade);
+
             modelBuilder.Entity<User>()
-                .HasOne(u => u.WishList)
-                .WithOne(u => u.User)
-                .OnDelete(DeleteBehavior.Cascade);
-                
+                        .HasOne(b => b.WishList)
+                        .WithOne(i => i.User)
+                        .HasForeignKey<WishList>(b => b.UserId);
         }
     }
 }

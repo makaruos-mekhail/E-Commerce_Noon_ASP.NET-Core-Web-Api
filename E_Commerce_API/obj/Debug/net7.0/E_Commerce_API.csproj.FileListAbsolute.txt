@@ -508,93 +508,93 @@ F:\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Application.dll
 F:\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Reposatory.dll
 F:\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Application.pdb
 F:\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Reposatory.pdb
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\appsettings.Development.json
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\appsettings.json
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\E_Commerce_API.exe
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\E_Commerce_API.deps.json
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\E_Commerce_API.runtimeconfig.json
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\E_Commerce_API.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\E_Commerce_API.pdb
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Azure.Core.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Azure.Identity.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Humanizer.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Identity.Client.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.OpenApi.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Mono.TextTemplating.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.CodeDom.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Drawing.Common.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Memory.Data.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Runtime.Caching.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Security.Permissions.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Windows.Extensions.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Application.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Context.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Domain.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Reposatory.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Application.pdb
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Context.pdb
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Reposatory.pdb
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Domain.pdb
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.csproj.AssemblyReference.cache
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.AssemblyInfoInputs.cache
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.AssemblyInfo.cs
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.csproj.CoreCompileInputs.cache
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets\msbuild.E_Commerce_API.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets\msbuild.build.E_Commerce_API.props
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.E_Commerce_API.props
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.E_Commerce_API.props
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets.pack.json
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets.build.json
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets.development.json
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\scopedcss\bundle\E_Commerce_API.styles.css
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.csproj.CopyComplete
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\refint\E_Commerce_API.dll
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.pdb
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.genruntimeconfig.cache
-C:\Users\Elmasry\Downloads\E-Commerce_Api_new\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\ref\E_Commerce_API.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\appsettings.Development.json
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\appsettings.json
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\E_Commerce_API.exe
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\E_Commerce_API.deps.json
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\E_Commerce_API.runtimeconfig.json
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\E_Commerce_API.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\E_Commerce_API.pdb
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Azure.Core.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Azure.Identity.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Humanizer.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.CodeDom.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Memory.Data.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Application.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Context.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Domain.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Reposatory.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Application.pdb
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Context.pdb
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Reposatory.pdb
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\bin\Debug\net7.0\Domain.pdb
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.csproj.AssemblyReference.cache
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.AssemblyInfoInputs.cache
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.AssemblyInfo.cs
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.csproj.CoreCompileInputs.cache
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.MvcApplicationPartsAssemblyInfo.cs
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.MvcApplicationPartsAssemblyInfo.cache
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets\msbuild.E_Commerce_API.Microsoft.AspNetCore.StaticWebAssets.props
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets\msbuild.build.E_Commerce_API.props
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.E_Commerce_API.props
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.E_Commerce_API.props
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets.pack.json
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets.build.json
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\staticwebassets.development.json
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\scopedcss\bundle\E_Commerce_API.styles.css
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.csproj.CopyComplete
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\refint\E_Commerce_API.dll
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.pdb
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\E_Commerce_API.genruntimeconfig.cache
+D:\ITI_FullStack .net\Final project course\E-Commerce_Api_new\E_Commerce_API\obj\Debug\net7.0\ref\E_Commerce_API.dll
