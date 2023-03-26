@@ -15,6 +15,7 @@ namespace E_Commerce_API.Controllers
         {
             _productRepository = productRepository;
         }
+
         [HttpGet]
         public async Task<IActionResult> Filter(string? name, string? Category, int? fromPrice, int? toPrice, string? brand, long? colorId)
         {
@@ -31,5 +32,12 @@ namespace E_Commerce_API.Controllers
         }
 
 
-    }
+		[HttpDelete("{id}")]
+		public async Task<IActionResult> DeleteProduct([FromRoute] long id)
+		{
+			return Ok(await _productRepository.DeleteAsync(id));
+		}
+
+
+	}
 }

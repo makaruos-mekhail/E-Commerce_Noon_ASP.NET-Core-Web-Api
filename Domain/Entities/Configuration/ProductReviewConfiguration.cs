@@ -10,10 +10,16 @@ namespace Domain.Entities.Configuration
         {
             builder.ToTable("Review");
             builder.HasKey(r => r.Id);
-            builder.Property(r => r.Id).IsRequired().ValueGeneratedOnAdd();
+
+            builder.Property(r => r.Id)
+                .IsRequired()
+                .ValueGeneratedOnAdd();
+
             //builder.Property(r => r.UserId).IsRequired();
-            builder.Property(r => r.ProductId).IsRequired();
-            builder.Property(r => r.Review).HasMaxLength(300);
+            //builder.Property(r => r.ProductId).IsRequired();
+            builder.Property(r => r.Review)
+                .HasMaxLength(500);
+
             //builder.Property(r => r.Rate).HasDefaultValue();
 
 

@@ -13,11 +13,11 @@ namespace Domain.Entities
 
         public virtual Category? ParentCategory { get; set; }
 
-		public virtual ICollection<Category> SubCategories { get; set; }
+		public virtual ICollection<Category>? SubCategories { get; set; }
 
-		public ItemStatus Status { get; protected set; }
+		//public ItemStatus Status { get; protected set; }
 
-		public virtual ICollection<Product> Products { get; set; }
+		public virtual ICollection<Product>? Products { get; set; }
 
     //    public virtual ICollection<Brand> Brands { get; set; }
     }

@@ -2,7 +2,9 @@
 
 namespace E_Commerce_API.Controllers
 {
-    public class OrderItemController : ControllerBase
+	[Route("api/[controller]/[action]")]
+	[ApiController]
+	public class OrderItemController : ControllerBase
     {
 
       

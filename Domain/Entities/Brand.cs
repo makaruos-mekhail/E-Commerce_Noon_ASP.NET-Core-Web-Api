@@ -8,7 +8,7 @@
 
         public string NameAr { get; set; }
 
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product>? Products { get; set; }
 
       //  public virtual ICollection<Category> Categories { get; set; }
     }

@@ -4,23 +4,19 @@
     {
         public long Id { get; set; }
 
-		public bool IsClosed { get; set; }
+		public string Address { set; get; }
 
-		public int ProductId { get; set; }
+		public string AddressAr { set; get; }
 
-        public int Quantity { get; set; }
-
-        public decimal TotalPrice { get; set; }
+		public decimal TotalPrice { get; set; }
 
         public int? Discount { get; set; }
 
-		public virtual ICollection<Product> Product { get; set; }
+		public string PaymentMethod { get; set; }
 
-        public virtual ICollection<OrderItem> OrderItems { get; set; }
+        public virtual ICollection<OrderItems> OrderItems { get; set; }
 
-        public long UserId { get; set; }
-
-        public User User { get; set; }
+        public virtual User User { get; set; }
 
     }
 }

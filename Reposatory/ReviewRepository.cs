@@ -20,7 +20,7 @@ namespace Reposatory
 
         public Task<IEnumerable<ProductReview>> GitByProductIdAscyn(long productid)
         {
-            IEnumerable<ProductReview> productReviews = _context.ProductReviews.Where(r => r.ProductId == productid);
+            IEnumerable<ProductReview> productReviews = _context.ProductReviews.Where(r => r.Product.Id == productid);
 
             return Task.FromResult(productReviews);
 

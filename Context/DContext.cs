@@ -11,7 +11,7 @@ namespace Context
         public DbSet<Brand> Brand { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<Order> Order { get; set; }
-        public DbSet<OrderItem> OrderDetails { get; set; }
+        public DbSet<OrderItems> OrderDetails { get; set; }
         public DbSet<Product> Product { get; set; }
         public DbSet<ProductColor> ProductColors { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
@@ -23,7 +23,7 @@ namespace Context
             new BrandConfiguration().Configure(modelBuilder.Entity<Brand>());
             new CategoryConfigration().Configure(modelBuilder.Entity<Category>());
             new OrderConfigration().Configure(modelBuilder.Entity<Order>());
-            new OrderDetailsConfigration().Configure(modelBuilder.Entity<OrderItem>());
+            new OrderItemsConfigration().Configure(modelBuilder.Entity<OrderItems>());
             new ProductConfigration().Configure(modelBuilder.Entity<Product>());
             new ProductImagesConfiguration().Configure(modelBuilder.Entity<ProductImage>());
             new WishListConfiguration().Configure(modelBuilder.Entity<WishList>());

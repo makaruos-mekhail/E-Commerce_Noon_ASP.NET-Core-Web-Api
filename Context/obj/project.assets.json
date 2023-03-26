@@ -3657,25 +3657,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\asd\\.nuget\\packages\\": {}
+    "C:\\Users\\mosta\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITI_FullStack .net\\Final project course\\E-Commerce_Api_new\\Context\\Context.csproj",
+      "projectUniqueName": "E:\\AA Courses\\ITI\\.Net\\Final Project\\GitHub_ApiProject\\E-Commerce_Api\\Context\\Context.csproj",
       "projectName": "Context",
-      "projectPath": "D:\\ITI_FullStack .net\\Final project course\\E-Commerce_Api_new\\Context\\Context.csproj",
-      "packagesPath": "C:\\Users\\asd\\.nuget\\packages\\",
-      "outputPath": "D:\\ITI_FullStack .net\\Final project course\\E-Commerce_Api_new\\Context\\obj\\",
+      "projectPath": "E:\\AA Courses\\ITI\\.Net\\Final Project\\GitHub_ApiProject\\E-Commerce_Api\\Context\\Context.csproj",
+      "packagesPath": "C:\\Users\\mosta\\.nuget\\packages\\",
+      "outputPath": "E:\\AA Courses\\ITI\\.Net\\Final Project\\GitHub_ApiProject\\E-Commerce_Api\\Context\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\asd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mosta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -3683,8 +3684,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\ITI_FullStack .net\\Final project course\\E-Commerce_Api_new\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\ITI_FullStack .net\\Final project course\\E-Commerce_Api_new\\Domain\\Domain.csproj"
+            "E:\\AA Courses\\ITI\\.Net\\Final Project\\GitHub_ApiProject\\E-Commerce_Api\\Domain\\Domain.csproj": {
+              "projectPath": "E:\\AA Courses\\ITI\\.Net\\Final Project\\GitHub_ApiProject\\E-Commerce_Api\\Domain\\Domain.csproj"
             }
           }
         }
@@ -3738,7 +3739,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

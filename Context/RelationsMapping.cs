@@ -24,13 +24,14 @@ namespace Context
             modelBuilder.Entity<Product>()
                 .HasMany(p => p.ProductImages)
                 .WithOne(i => i.Product)
-                .HasForeignKey( p => p.ProductId)
+                //.HasForeignKey( p => p.ProductId)
 				.OnDelete(DeleteBehavior.Cascade);
 
 			modelBuilder.Entity<Product>()
                 .HasMany(p => p.ProductReview)
                 .WithOne(r => r.Product)
                 .OnDelete(DeleteBehavior.Cascade);
+
             /// Product Images
             //modelBuilder.Entity<ProductImage>()
             //    .HasOne(i => i.Product)
@@ -40,7 +41,7 @@ namespace Context
             modelBuilder.Entity<Category>()
                 .HasMany(c => c.Products)
                 .WithOne(p => p.Category)
-                .HasForeignKey(p => p.ProductCategoryId)
+                //.HasForeignKey(p => p.ProductCategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             //modelBuilder.Entity<Category>()
@@ -68,17 +69,18 @@ namespace Context
             /// Order Relations
             modelBuilder.Entity<Order>()
 				.HasOne(o => o.User);
+
             modelBuilder.Entity<Order>()
                 .HasMany(o => o.OrderItems)
                 .WithOne(oi => oi.Order)
-                .HasForeignKey(o => o.OrderId)
+                //.HasForeignKey(o => o.OrderId)
 				.OnDelete(DeleteBehavior.Cascade);
 
-            /// OrderItem Relations
-            modelBuilder.Entity<OrderItem>()
-				.HasOne(oi => oi.Product);
-            modelBuilder.Entity<OrderItem>()
-				.HasOne(oi => oi.Order);
+            /// OrderItems Relations
+    //        modelBuilder.Entity<OrderItems>()
+				//.HasOne(oi => oi.Product);
+    //        modelBuilder.Entity<OrderItems>()
+				//.HasOne(oi => oi.Order);
 
             /// ProductColor Relations
     //        modelBuilder.Entity<ProductColor>()
@@ -94,14 +96,13 @@ namespace Context
             modelBuilder.Entity<WishList>()
 				.HasMany(w => w.Products)
 				.WithOne(p => p.WishList)
-                .HasForeignKey(p => p.WishListId)
+                //.HasForeignKey(p => p.WishListId)
                 .OnDelete(DeleteBehavior.NoAction);
 
 			/// ProductReview Relations
-             modelBuilder.Entity<ProductReview>()
-                .HasOne(r => r.User);
-             modelBuilder.Entity<ProductReview>()
-                .HasOne(r => r.Product);
+             modelBuilder.Entity<Product>()
+                .HasMany(r => r.ProductReview)
+                .WithOne(p => p.Product);
 
             /// User Relations
             modelBuilder.Entity<User>()
@@ -123,7 +124,13 @@ namespace Context
             modelBuilder.Entity<User>()
                         .HasOne(b => b.WishList)
                         .WithOne(i => i.User)
-                        .HasForeignKey<WishList>(b => b.UserId);
-        }
+			            .HasForeignKey<WishList>(b => b.UserId);
+
+          
+            modelBuilder.Entity<Product>()
+			.HasOne(b => b.OrderItems)
+			.WithOne(i => i.Product)
+			.HasForeignKey<OrderItems>(b => b.ProductId);
+		}
     }
 }

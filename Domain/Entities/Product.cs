@@ -21,26 +21,31 @@ namespace Domain.Entities
 
         public string ImagePath { get; set; }
 
-        public byte? Rate { get; set; }
+        public byte Rate { get; set; }
 
-        public long ProductCategoryId { get; set; }
+        //public long CategoryId { get; set; }
 
-        public virtual Brand Brand { get; set; }
+        public virtual Brand? Brand { get; set; }
 
         public virtual Category Category { get; set; }
 
-        //public virtual ICollection<ProductImage> Images { get; set; }
+        //public virtual ICollection<Order> Orders { get; set; }  //////////////
+        public virtual OrderItems? OrderItems { get; set; }
 
-        public virtual ICollection<Order> Orders { get; set; }
-
-        public long? WishListId;
         public virtual WishList? WishList { get; set; }
 
-        public virtual ICollection<ProductColor> ProductColors { get; set; }
+        /// <summary>
+        /// under test
+        /// </summary>
+        public virtual ICollection<ProductColor> ProductColors { get; set; } 
 
         public virtual ICollection<ProductImage> ProductImages { get; set; }
 
-        public virtual ICollection<ProductReview> ProductReview { get; set; }
+        public virtual ICollection<ProductReview>? ProductReview { get; set; }
+      
+        
+        
+        
         public bool AddImage(ProductImage image)
         {
             var imageItem = ProductImages.FirstOrDefault(a => a.ImagePath == image.ImagePath);

@@ -16,17 +16,21 @@ namespace Domain.Entities.Configuration
             
             builder.HasKey(o => o.Id);
 
-            builder.Property(o => o.Id).IsRequired().ValueGeneratedOnAdd();
-
-            builder.Property(o => o.Quantity).IsRequired();
+            builder.Property(o => o.Id)
+                .ValueGeneratedOnAdd();
 
             builder.Property(o => o.Discount)
                 .HasDefaultValue(0);
+
             builder.Property(o => o.TotalPrice)
                 .IsRequired()
                 .HasColumnType("decimal(18,2)");
-            builder.Property(o => o.ProductId).IsRequired();
 
-        }
+			builder.Property(i => i.Address)
+                .IsRequired();
+
+			builder.Property(i => i.PaymentMethod)
+                .HasMaxLength(100);
+		}
     }
 }

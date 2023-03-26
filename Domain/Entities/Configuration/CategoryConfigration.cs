@@ -16,11 +16,11 @@ namespace Domain.Entities.Configuration
 
             builder.Property(i => i.Name)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(100);
 
             builder.Property(i=> i.NameAr)
                .IsRequired()
-				.HasMaxLength(50);
+				.HasMaxLength(100);
 
         }
     }
