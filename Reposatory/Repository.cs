@@ -1,5 +1,6 @@
 ﻿using Application.Contracts;
 using Context;
+using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
