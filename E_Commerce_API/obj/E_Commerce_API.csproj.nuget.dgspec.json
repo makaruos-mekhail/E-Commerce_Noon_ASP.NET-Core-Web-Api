@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\E-Commerce_Api_new\\E_Commerce_API\\E_Commerce_API.csproj": {}
+    "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\E_Commerce_API\\E_Commerce_API.csproj": {}
   },
   "projects": {
-    "F:\\E-Commerce_Api_new\\Application\\Application.csproj": {
+    "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\E-Commerce_Api_new\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "F:\\E-Commerce_Api_new\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\Fatima\\.nuget\\packages\\",
-        "outputPath": "F:\\E-Commerce_Api_new\\Application\\obj\\",
+        "projectPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Elmasry\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fatima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Elmasry\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj": {
-                "projectPath": "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj"
+              "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Domain\\Domain.csproj"
               }
             }
           }
@@ -59,21 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\E-Commerce_Api_new\\Context\\Context.csproj": {
+    "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Context\\Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\E-Commerce_Api_new\\Context\\Context.csproj",
+        "projectUniqueName": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Context\\Context.csproj",
         "projectName": "Context",
-        "projectPath": "F:\\E-Commerce_Api_new\\Context\\Context.csproj",
-        "packagesPath": "C:\\Users\\Fatima\\.nuget\\packages\\",
-        "outputPath": "F:\\E-Commerce_Api_new\\Context\\obj\\",
+        "projectPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Context\\Context.csproj",
+        "packagesPath": "C:\\Users\\Elmasry\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Context\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fatima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Elmasry\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,8 +87,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj": {
-                "projectPath": "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj"
+              "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Domain\\Domain.csproj"
               }
             }
           }
@@ -142,21 +142,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj": {
+    "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "F:\\E-Commerce_Api_new\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Fatima\\.nuget\\packages\\",
-        "outputPath": "F:\\E-Commerce_Api_new\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Elmasry\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fatima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Elmasry\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -207,21 +207,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\E-Commerce_Api_new\\E_Commerce_API\\E_Commerce_API.csproj": {
+    "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\E_Commerce_API\\E_Commerce_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\E-Commerce_Api_new\\E_Commerce_API\\E_Commerce_API.csproj",
+        "projectUniqueName": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\E_Commerce_API\\E_Commerce_API.csproj",
         "projectName": "E_Commerce_API",
-        "projectPath": "F:\\E-Commerce_Api_new\\E_Commerce_API\\E_Commerce_API.csproj",
-        "packagesPath": "C:\\Users\\Fatima\\.nuget\\packages\\",
-        "outputPath": "F:\\E-Commerce_Api_new\\E_Commerce_API\\obj\\",
+        "projectPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\E_Commerce_API\\E_Commerce_API.csproj",
+        "packagesPath": "C:\\Users\\Elmasry\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\E_Commerce_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fatima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Elmasry\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -235,14 +235,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "F:\\E-Commerce_Api_new\\Application\\Application.csproj": {
-                "projectPath": "F:\\E-Commerce_Api_new\\Application\\Application.csproj"
+              "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Application\\Application.csproj"
               },
-              "F:\\E-Commerce_Api_new\\Context\\Context.csproj": {
-                "projectPath": "F:\\E-Commerce_Api_new\\Context\\Context.csproj"
+              "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Context\\Context.csproj": {
+                "projectPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Context\\Context.csproj"
               },
-              "F:\\E-Commerce_Api_new\\Reposatory\\Reposatory.csproj": {
-                "projectPath": "F:\\E-Commerce_Api_new\\Reposatory\\Reposatory.csproj"
+              "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Reposatory\\Reposatory.csproj": {
+                "projectPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Reposatory\\Reposatory.csproj"
               }
             }
           }
@@ -309,21 +309,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\E-Commerce_Api_new\\Reposatory\\Reposatory.csproj": {
+    "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Reposatory\\Reposatory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\E-Commerce_Api_new\\Reposatory\\Reposatory.csproj",
+        "projectUniqueName": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Reposatory\\Reposatory.csproj",
         "projectName": "Reposatory",
-        "projectPath": "F:\\E-Commerce_Api_new\\Reposatory\\Reposatory.csproj",
-        "packagesPath": "C:\\Users\\Fatima\\.nuget\\packages\\",
-        "outputPath": "F:\\E-Commerce_Api_new\\Reposatory\\obj\\",
+        "projectPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Reposatory\\Reposatory.csproj",
+        "packagesPath": "C:\\Users\\Elmasry\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Reposatory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fatima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Elmasry\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -337,11 +337,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "F:\\E-Commerce_Api_new\\Application\\Application.csproj": {
-                "projectPath": "F:\\E-Commerce_Api_new\\Application\\Application.csproj"
+              "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Application\\Application.csproj"
               },
-              "F:\\E-Commerce_Api_new\\Context\\Context.csproj": {
-                "projectPath": "F:\\E-Commerce_Api_new\\Context\\Context.csproj"
+              "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Context\\Context.csproj": {
+                "projectPath": "C:\\Users\\Elmasry\\Downloads\\E-Commerce_Api_new\\E-Commerce_Api_new\\Context\\Context.csproj"
               }
             }
           }
@@ -371,7 +371,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
