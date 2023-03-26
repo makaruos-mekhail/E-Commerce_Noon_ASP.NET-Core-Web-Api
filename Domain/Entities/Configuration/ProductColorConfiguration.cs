@@ -8,7 +8,10 @@ namespace Domain.Entities.Configuration
         public void Configure(EntityTypeBuilder<ProductColor> builder)
         {
             builder.ToTable("ProductColors");
-            builder.HasKey(x => new { x.ProductId, x.Name });
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id)
+				.ValueGeneratedOnAdd();
+
         }
     }
 }

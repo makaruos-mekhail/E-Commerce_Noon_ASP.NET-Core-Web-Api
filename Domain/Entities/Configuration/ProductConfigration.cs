@@ -29,30 +29,35 @@ namespace Domain.Entities.Configuration
 		{
 			builder.ToTable("Products");
 			builder.HasKey(s => s.Id);
+
 			builder.Property(s => s.Id)
 				.ValueGeneratedOnAdd();
 
 			builder.Property(s => s.Name)
 				.IsRequired()
-				.HasMaxLength(50);
+				.HasMaxLength(100);
+
 			builder.Property(s => s.NameAr)
 				.IsRequired()
-				.HasMaxLength(50);
+				.HasMaxLength(100);
 
 			builder.Property(s => s.Sizes)
 				.HasMaxLength(50);
 
 			builder.Property(s => s.Description)
 				.IsRequired()
-				.HasMaxLength(500);
+				.HasMaxLength(1000);
 
 			builder.Property(s => s.DescriptionAr)
 				.IsRequired()
-				.HasMaxLength(500);
+				.HasMaxLength(1000);
 
 			builder.Property(s => s.Price)
 				.IsRequired()
 				.HasColumnType("decimal(18,2)");
+
+			builder.Property(p => p.Rate)
+				.HasDefaultValue(0);
 			
 			//builder.HasMany(s => s.Images)
 			//	.WithOne(s => s.product)

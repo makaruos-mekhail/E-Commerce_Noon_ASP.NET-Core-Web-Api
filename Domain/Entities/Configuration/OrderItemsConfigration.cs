@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities.Configuration
 {
-    public class WishListConfiguration : IEntityTypeConfiguration<WishList>
+    public class OrderItemsConfigration : IEntityTypeConfiguration<OrderItems>
     {
-        public void Configure(EntityTypeBuilder<WishList> builder)
+        public void Configure(EntityTypeBuilder<OrderItems> builder)
         {
-            builder.ToTable("WishList");
-
-            builder.HasKey(i => i.Id);
-
+            builder.ToTable("OrderItems");
+            builder.HasKey(x => x.Id);
             builder.Property(i => i.Id)
-                .ValueGeneratedOnAdd();
+                .IsRequired()
+                .ValueGeneratedOnAdd();            
+            
         }
     }
 }

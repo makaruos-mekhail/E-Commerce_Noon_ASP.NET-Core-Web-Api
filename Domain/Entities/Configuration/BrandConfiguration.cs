@@ -15,11 +15,18 @@ namespace Domain.Entities.Configuration
         {
             builder.ToTable("Brand");
             builder.HasKey(b => b.Id);
-            builder.Property(b => b.Id).IsRequired().ValueGeneratedOnAdd();
-            builder.Property(b => b.Name).IsRequired().
-                HasMaxLength(50).HasColumnName("BrandName");
-            builder.Property(b => b.NameAr).IsRequired().
-                HasMaxLength(50).HasColumnName("BrandNameAr");
+            builder.Property(b => b.Id)
+                .ValueGeneratedOnAdd();
+
+            builder.Property(b => b.Name)
+                .IsRequired()
+                .HasMaxLength(50)
+                .HasColumnName("BrandName");
+
+            builder.Property(b => b.NameAr)
+                .IsRequired()
+                .HasMaxLength(50)
+                .HasColumnName("BrandNameAr");
         }
     }
 
