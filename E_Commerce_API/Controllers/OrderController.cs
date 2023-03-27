@@ -13,19 +13,14 @@ namespace E_Commerce_API.Controllers
 	{
 		private readonly IOrderRepository _iorderRepository;
 
+		private readonly DContext db ;
 
-		public OrderController(IOrderRepository iorderRepository)
+		public OrderController(IOrderRepository iorderRepository, DContext dContext)
 		{
+			db = dContext;
 			_iorderRepository = iorderRepository;
 
 		}
-		// [HttpPost]
-		//public async Task<IActionResult> createorder()
-		//{
-		//    var data = con.Order.Add(order);
-		//        await con.SaveChangesAsync();
-		//       return Ok(data);
-		//}
 
 		[HttpGet("{id}")]
 		public async Task<IActionResult> GetOrderByID(long id)
@@ -35,12 +30,28 @@ namespace E_Commerce_API.Controllers
 
 		}
 
+
 		[HttpGet]
 		public async Task<IActionResult> GetAllOrders()
 		{
 			var orders = await _iorderRepository.GetAllOrder();
 
 			return Ok(orders);
+		}
+
+		//[HttpPost]
+		//public async Task<IActionResult> AddOrder(Order order)
+		//{
+		//	var data = await _iorderRepository.AddOreder(order);
+		//	return Ok(data);
+		//}
+
+		[HttpPost]
+		public async Task<IActionResult> AddOrder(Order order)
+		{
+			 await db.AddAsync(order);
+			 await db.SaveChangesAsync();
+			return Ok(order);
 		}
 
 		[HttpDelete("{id}")]

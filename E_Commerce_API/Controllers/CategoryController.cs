@@ -1,5 +1,6 @@
 ﻿using Application.Contracts;
 using Context;
+using Domain.Entities;
 using E_Commerce_API.Reposatories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,36 +10,39 @@ namespace E_Commerce_API.Controllers
 	[ApiController]
 	public class CategoryController : ControllerBase
     {
-
-
-        //public DContext _context= new DContext();
-
-        //private DContext _Context;
-        //private readonly RepoCategory RepoCategory;
-        //public CategoryController(DContext context)
-        //{
-        //    _context = context;
-
-        //    //_Context = context;
-        //}
+		private readonly DContext db;
 
 
 
-        //private CategoryController(RepoCategory _Category)
-        //{
-        //    RepoCategory = _Category;
-        //}
+		//public DContext _context= new DContext();
 
-        //      [HttpGet]
-        //      public async Task<IActionResult> GetCategories(string? filter = null)
-        //      {
-        //	var data = await RepoCategory.FilterByAsync(filter);
-        //	return Ok(data);
-        //}
-        private readonly ICategoryRepository _categoryRepository;
-        public CategoryController(ICategoryRepository categoryRepository)
+		//private DContext _Context;
+		//private readonly RepoCategory RepoCategory;
+		//public CategoryController(DContext context)
+		//{
+		//    _context = context;
+
+		//    //_Context = context;
+		//}
+
+
+		//private CategoryController(RepoCategory _Category)
+		//{
+		//    RepoCategory = _Category;
+		//}
+
+		//      [HttpGet]
+		//      public async Task<IActionResult> GetCategories(string? filter = null)
+		//      {
+		//	var data = await RepoCategory.FilterByAsync(filter);
+		//	return Ok(data);
+		//}
+
+		private readonly ICategoryRepository _categoryRepository;
+        public CategoryController(ICategoryRepository categoryRepository, DContext dContext)
         {
             _categoryRepository = categoryRepository;
+			db = dContext;
         }
 
 		[HttpGet]
@@ -47,6 +51,15 @@ namespace E_Commerce_API.Controllers
 			var categories = await _categoryRepository.FilterByAsync(name);
 
 			return Ok(categories);
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> CreateCategoryTest([FromBody] Category category)
+		{
+			return Ok(await _categoryRepository.CreateAsync(category));
+			//await db.AddAsync(category);
+			//await db.SaveChangesAsync();
+			//return Ok(category);
 		}
 
 		[HttpGet("{id}")]
@@ -58,7 +71,6 @@ namespace E_Commerce_API.Controllers
            // return Ok(categories);  
             //return  Ok(await RepoCategory.GetByIDAsync(id));
         }
-		
 
 		[HttpDelete("{id}")]
 		public async Task<IActionResult> DeleteCategory([FromRoute] int id)

@@ -1,4 +1,6 @@
 ﻿using Domain.Enums;
+using System.Text.Json.Serialization;
+
 namespace Domain.Entities
 {
     public class Category
@@ -17,6 +19,7 @@ namespace Domain.Entities
 
 		//public ItemStatus Status { get; protected set; }
 
+		[JsonIgnore]
 		public virtual ICollection<Product>? Products { get; set; }
 
     //    public virtual ICollection<Brand> Brands { get; set; }
