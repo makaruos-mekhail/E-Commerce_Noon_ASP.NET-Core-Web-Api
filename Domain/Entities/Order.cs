@@ -1,4 +1,6 @@
-﻿namespace Domain.Entities
+﻿using System.Text.Json.Serialization;
+
+namespace Domain.Entities
 {
     public class Order
     {
@@ -14,6 +16,7 @@
 
 		public string PaymentMethod { get; set; }
 
+        //[JsonIgnore]
         public virtual ICollection<OrderItems> OrderItems { get; set; }
 
         public virtual User User { get; set; }

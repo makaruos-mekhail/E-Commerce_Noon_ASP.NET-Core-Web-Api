@@ -16,9 +16,9 @@ builder.Services.AddDbContext<DContext>(options =>
 
 // Add services to the container.
 
-//builder.Services.AddIdentity<User, IdentityRole<long>>()
-//    .AddEntityFrameworkStores<DContext>()
-//    .AddDefaultTokenProviders();
+builder.Services.AddIdentity<User, IdentityRole<long>>()
+    .AddEntityFrameworkStores<DContext>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -36,8 +36,9 @@ builder.Services.AddControllers();
 
 builder.Services.AddSwaggerGen();
 
-//builder.Services.AddControllers()
-//                    .AddJsonOptions(o => o.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+builder.Services.AddControllers()
+                    .AddJsonOptions(o => o.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
 builder.Services.AddEndpointsApiExplorer();
 var app = builder.Build();
 
