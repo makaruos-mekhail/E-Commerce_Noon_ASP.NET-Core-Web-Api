@@ -23,6 +23,12 @@ namespace Domain.Entities
 
         public byte Rate { get; set; }
 
+        public byte? Discount { get; set; }
+
+        public int Quantity { get; set; }
+
+        public string ModelNumber { get; set; }
+
         //public long CategoryId { get; set; }
 
         public virtual Brand? Brand { get; set; }

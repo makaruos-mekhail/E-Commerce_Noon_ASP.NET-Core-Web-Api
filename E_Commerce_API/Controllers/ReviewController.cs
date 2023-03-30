@@ -1,6 +1,6 @@
 ﻿using Application.Contracts;
 using Microsoft.AspNetCore.Mvc;
-using Reposatory;
+using Repository;
 
 namespace E_Commerce_API.Controllers
 {

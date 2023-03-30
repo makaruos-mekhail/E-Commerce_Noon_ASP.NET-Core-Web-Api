@@ -3,7 +3,7 @@ using Context;
 using Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Reposatory;
+using Repository;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<DContext>(options =>
     {
        // options.UseLazyLoadingProxies();
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnectionStringMostafa"));
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnectionStringMakarios"));
     }); 
 
 // Add services to the container.
@@ -48,7 +48,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

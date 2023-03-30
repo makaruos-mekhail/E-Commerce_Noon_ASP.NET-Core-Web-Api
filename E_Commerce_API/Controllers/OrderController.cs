@@ -2,8 +2,6 @@
 using Context;
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Reposatory;
 
 namespace E_Commerce_API.Controllers
 {

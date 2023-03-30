@@ -1,7 +1,7 @@
 ﻿using Application.Contracts;
 using Context;
 using Domain.Entities;
-using E_Commerce_API.Reposatories;
+using E_Commerce_API;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_Commerce_API.Controllers

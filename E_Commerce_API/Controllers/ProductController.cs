@@ -1,11 +1,9 @@
 ﻿using Application.Contracts;
-using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
-using Reposatory;
 
 namespace E_Commerce_API.Controllers
 {
-    [Route("api/[controller]")]
+	[Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
@@ -23,16 +21,21 @@ namespace E_Commerce_API.Controllers
 
             return Ok(products);
         }
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetProductByID(long id)
-        {
-            var product = await _productRepository.GetByIdAsync(id);
-            return Ok(product);
+        //[HttpGet("{id}")]
+        //public async Task<IActionResult> GetProductByID(long id)
+        //{
+        //    var product = await _productRepository.GetByIdAsync(id);
+        //    return Ok(product);
 
+        //}
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> getproductdetails(long id)
+        {
+            return Ok(await _productRepository.GetProductDetailsById(id));
         }
 
-
-		[HttpDelete("{id}")]
+        [HttpDelete("{id}")]
 		public async Task<IActionResult> DeleteProduct([FromRoute] long id)
 		{
 			return Ok(await _productRepository.DeleteAsync(id));

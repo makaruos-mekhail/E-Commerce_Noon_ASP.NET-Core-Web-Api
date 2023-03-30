@@ -32,7 +32,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Context\Context.csproj" />
-    <ProjectReference Include="..\Reposatory\Reposatory.csproj" />
+    <ProjectReference Include="..\Reposatory\Repository.csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
   </ItemGroup>
 
 </Project>

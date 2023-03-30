@@ -1,6 +1,9 @@
-﻿namespace Domain.Entities
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Domain.Entities
 {
-    public class OrderItems
+    [Index (nameof(ProductId), IsUnique = false)]
+    public class OrderItems 
     {
         public long Id { get; set; }
         
