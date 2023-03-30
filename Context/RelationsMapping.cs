@@ -1,10 +1,9 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Metadata;
 
 namespace Context
 {
-    public static class RelationsMapping
+	public static class RelationsMapping
     {
         public static void MapRelations(this ModelBuilder modelBuilder)
         {
@@ -131,6 +130,11 @@ namespace Context
 			.HasOne(b => b.OrderItems)
 			.WithOne(i => i.Product)
 			.HasForeignKey<OrderItems>(b => b.ProductId);
-		}
+
+            modelBuilder.Entity<OrderItems>()
+                .HasIndex(o => o.ProductId)
+                .IsUnique(false);
+
+        }
     }
 }

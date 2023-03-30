@@ -1,6 +1,4 @@
-﻿using Domain.Entities;
-
-namespace Reposatory.DTOs
+﻿namespace Reposatory.DTOs
 {
 	public class OrderDTO
 	{
@@ -10,7 +8,9 @@ namespace Reposatory.DTOs
 			public int Quantity { get; set; }
 			public long ProductId { get; set; }
 		}		
-		public long UserId { get; set; }
+
+		public OrderItemDTO orderItem { get; set; }
+        public long UserId { get; set; }
 
 		public ICollection<OrderItemDTO> OrderItemsDTO { get; set; }
 

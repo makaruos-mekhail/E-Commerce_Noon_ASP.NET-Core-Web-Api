@@ -9,15 +9,11 @@ namespace Domain.Entities
 
 		public string LastName { get; protected set; }
 
-		public string Address { get; protected set; }
+		public string? Address { get; protected set; }
 
-		public string City { get; protected set; }
+		public string? City { get; protected set; }
 
-		public string Country { get; protected set; }
-
-		public string? PostalCode { get; protected set; }
-
-		public string Phone { get; protected set; }
+		public string? Phone { get; protected set; }
 
 		public virtual ICollection<Order>? Orders { get; protected set; }
 

@@ -1,12 +1,10 @@
 ﻿using Application.Contracts;
 using Context;
-using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 
-namespace E_Commerce_API.Reposatories
+namespace Repository
 {
-    public class Repository<TEntity, TId> : IRepository<TEntity, TId>
+	public class Repository<TEntity, TId> : IRepository<TEntity, TId>
         where TEntity : class
     {
         protected readonly DContext _context;//= new DContext();
