@@ -5,9 +5,9 @@ namespace Domain.Entities
 {
 	public class User : IdentityUser<long>
 	{
-        public string FirstName { get; protected set; }
+        public string FirstName { get; set; }
 
-		public string LastName { get; protected set; }
+		public string LastName { get; set; }
 
 		public string? Address { get; protected set; }
 
