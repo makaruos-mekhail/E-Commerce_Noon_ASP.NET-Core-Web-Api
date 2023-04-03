@@ -1,6 +1,7 @@
 ﻿using Application.Contracts;
 using Context;
 using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Repository
 {
@@ -12,7 +13,7 @@ namespace Repository
 
         public Task<IEnumerable<ProductReview>> GitByProductIdAscyn(long productid)
         {
-            IEnumerable<ProductReview> productReviews = _context.ProductReviews
+            IEnumerable<ProductReview> productReviews = _context.ProductReviews.Include(r=>r.User)
                 .Where(r => r.Product.Id == productid);
 
             return Task.FromResult(productReviews);
