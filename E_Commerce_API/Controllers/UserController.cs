@@ -61,6 +61,7 @@ namespace E_Commerce_API.Controllers
 
                     return BadRequest("error");
                 }
+
                 return Ok();
             }
             catch (Exception ex)
