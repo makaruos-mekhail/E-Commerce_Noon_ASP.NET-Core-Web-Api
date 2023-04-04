@@ -15,5 +15,6 @@ namespace Application.Contracts
         //Task<IEnumerable<Product>> FilterByAsync(FilterDto filterDto);
 
         Task<Product> GetProductDetailsById(long id);
+        Task<List<Product>> GetProductsbyIdes(long[] ides);
     }
 }
