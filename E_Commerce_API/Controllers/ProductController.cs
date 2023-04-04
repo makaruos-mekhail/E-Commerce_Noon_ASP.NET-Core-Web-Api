@@ -14,10 +14,18 @@ namespace E_Commerce_API.Controllers
             _productRepository = productRepository;
         }
 
+        //[HttpPost]
         [HttpGet]
-        public async Task<IActionResult> Filter(string? name, string? Category, int? fromPrice, int? toPrice, string? brand, long? colorId)
+        public async Task<IActionResult> Filter(string? name = null, string? nameAr = null,
+            string? Category = null, string? CategoryAr = null,
+            int? fromPrice = null, int? toPrice = null,
+            string? brand = null, string? brandAr = null,
+            string? colorName = null)
         {
-            var products = await _productRepository.FilterByAsync(name, Category, fromPrice, toPrice, brand, colorId);
+            var products = await _productRepository.FilterByAsync(name, nameAr,
+                Category, CategoryAr, fromPrice, toPrice, brand, brandAr, colorName);
+
+          //  var products = await _productRepository.FilterByAsync(fi);
 
             return Ok(products);
         }
