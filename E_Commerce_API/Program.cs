@@ -2,6 +2,7 @@ using Application.Contracts;
 using AutoMapper;
 using Context;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +16,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<DContext>(options =>
     {
        // options.UseLazyLoadingProxies();
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DbContextConnectionFatmaAhmed"));
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnectionStringSleim"));
     }); 
 
 // Add services to the container.
@@ -34,6 +35,8 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 //builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
 builder.Services.AddScoped<IProductColorRepository, ProductColorRepository>();
 builder.Services.AddScoped<IProductImageRepository, ProductImageRepository>();
+
+
  
 builder.Services.AddControllers();
 
@@ -49,9 +52,22 @@ var config = new MapperConfiguration(cfg => { cfg.AddProfile<UserProfile>(); });
 
 IMapper mapper = config.CreateMapper();
 builder.Services.AddSingleton(mapper);
+//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+//            .AddCookie(options =>
+//            {
+//                options.Cookie.Name = "MyCookie";
+//               // options.Cookie.HttpOnly = true;
+//                options.ExpireTimeSpan = TimeSpan.FromDays(30);
+//                options.SlidingExpiration = true;
+//            });
+builder.Services.AddHttpContextAccessor();
+//builder.Services.Configure<CookiePolicyOptions>(options =>
+//{
+//    options.CheckConsentNeeded = context => true;
+//    options.MinimumSameSitePolicy = SameSiteMode.None;
+//});
 
-
-
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 builder.Services.AddEndpointsApiExplorer();
 //IMapper mapper = mapperConfig.CreateMapper();
@@ -70,5 +86,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
+//app.UseCookiePolicy();
 app.Run();
