@@ -25,10 +25,10 @@ namespace E_Commerce_API.Controllers
             var products = await _productRepository.FilterByAsync(name, nameAr,
                 Category, CategoryAr, fromPrice, toPrice, brand, brandAr, colorName);
 
-          //  var products = await _productRepository.FilterByAsync(fi);
 
             return Ok(products);
         }
+        
         //[HttpGet("{id}")]
         //public async Task<IActionResult> GetProductByID(long id)
         //{
