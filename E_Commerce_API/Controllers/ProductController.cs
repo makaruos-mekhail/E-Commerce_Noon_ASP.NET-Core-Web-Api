@@ -28,7 +28,21 @@ namespace E_Commerce_API.Controllers
 
             return Ok(products);
         }
-      
+        
+        //[HttpGet("{id}")]
+        //public async Task<IActionResult> GetProductByID(long id)
+        //{
+        //    var product = await _productRepository.GetByIdAsync(id);
+        //    return Ok(product);
+
+        //}
+        [HttpGet]
+        [Route("getproductsbyides")]
+
+        public async Task<IActionResult> getproductsbyides([FromQuery] long[] ids)
+        {
+            return Ok(await _productRepository.GetProductsbyIdes(ids));
+        }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> getproductdetails(long id)

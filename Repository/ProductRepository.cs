@@ -41,7 +41,22 @@ namespace Repository
 
             return Task.FromResult(products);
         }
+        public Task<List<Product>> GetProductsbyIdes(long[] ides)
+        {
+            List<Product> products = new List<Product>();
+            foreach (long id in ides)
+            {
+                var product = _context.Product
+                  // .Include(p => p.ProductImages)
+                  // .Include(p => p.ProductColors)
+                  //  .Include(p => p.ProductReview)
+                  .Include(p => p.Brand).AsNoTracking().Single(p => p.Id == id);
+                // .Include(p => p.Brand).Single(p => p.Id == id).Select(pp=>pp.Brand.Name);
+                products.Add(product);
 
+            }
+            return Task.FromResult(products);
+        }
         //public Task<IEnumerable<Product>> FilterByAsync(FilterDto filterDto)
         //{
         //    IEnumerable<Product> products = _context.Product.Include(a => a.Brand)
