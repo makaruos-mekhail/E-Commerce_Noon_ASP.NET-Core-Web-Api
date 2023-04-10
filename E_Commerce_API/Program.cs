@@ -16,7 +16,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<DContext>(options =>
     {
        // options.UseLazyLoadingProxies();
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnectionStringSleim"));
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DbContextConnectionFatmaAhmed"));
     }); 
 
 // Add services to the container.
@@ -75,11 +75,11 @@ builder.Services.AddEndpointsApiExplorer();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 app.UseHttpsRedirection();
 
