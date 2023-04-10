@@ -1,18 +1,10 @@
 ﻿using AutoMapper;
-using Azure;
 using Context;
 using Domain.Entities;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using Microsoft.Net.Http.Headers;
+using Microsoft.Extensions.DependencyInjection;
 using Repository.DTOs;
-using System.Runtime.Intrinsics.X86;
-using System.Security.Claims;
-using System.Threading;
 
 namespace E_Commerce_API.Controllers
 {
@@ -24,19 +16,22 @@ namespace E_Commerce_API.Controllers
         private readonly DContext _context;
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly RoleManager<IdentityRole<long>> _roleManager;
         private readonly ILogger<UserController> _logger;
         private readonly IMapper _mapper;
         private readonly HttpContext _httpContext;
 
         public UserController(DContext context,
             UserManager<User> userManager
-            , SignInManager<User> signInManager,
+            ,SignInManager<User> signInManager,
+            RoleManager<IdentityRole<long>> roleManager,
             ILogger<UserController> logger,
             IMapper mapper,
             IHttpContextAccessor httpContext)
         {
             _context = context;
             _userManager = userManager;
+            _roleManager = roleManager;
             _signInManager = signInManager;
             _logger = logger;
             _mapper = mapper;
@@ -58,11 +53,29 @@ namespace E_Commerce_API.Controllers
                 user.UserName = user.Email;
 
                 var result = await _userManager.CreateAsync(user,userdto.Password);
-                await _userManager.AddToRoleAsync(user, "TEST");
 
+                bool UserRoleIsExists = await _roleManager.RoleExistsAsync("CUSTOMER");
+                if (!UserRoleIsExists)
+                {
+                    _logger.LogInformation("Adding CUSTOMER role");
+
+                    var roleResult =await _roleManager.CreateAsync(new IdentityRole<long> { Name = "CUSTOMER"});
+
+                    if (!roleResult.Succeeded)
+                    {
+                        _logger.LogError("Error in creating CUSTOMER role");
+                        return BadRequest("Error in creating CUSTOMER role");
+                    }
+                }
+                await _userManager.AddToRoleAsync(user, "CUSTOMER");
 
                 if (!result.Succeeded)
                 {
+                    // if user found DuplicateUserName
+                    if (result.Errors.Any(e => e.Code == "DuplicateUserName"))
+                    {
+                        return BadRequest("Email already in use");
+                    }
 
                     return BadRequest("error");
                 }
@@ -99,16 +112,16 @@ namespace E_Commerce_API.Controllers
                 {
                     var User = await _userManager.FindByEmailAsync(loginUserDto.Email);
 
-                    if (User!=null)
-                    {
-                        //var cookieOptions = new CookieOptions();
-                        //Response.Cookies.Append("userId", User.Id.ToString(), cookieOptions);
-                        var cookieOptions = new CookieOptions();
-                        cookieOptions.Expires = DateTime.Now.AddDays(30);
-                        cookieOptions.Path = "/";
-                        Response.Cookies.Append("userId", User.Id.ToString(), cookieOptions);
+                    //if (User!=null)
+                    //{
+                    //    //var cookieOptions = new CookieOptions();
+                    //    //Response.Cookies.Append("userId", User.Id.ToString(), cookieOptions);
+                    //    var cookieOptions = new CookieOptions();
+                    //    cookieOptions.Expires = DateTime.Now.AddDays(30);
+                    //    cookieOptions.Path = "/";
+                    //    Response.Cookies.Append("userId", User.Id.ToString(), cookieOptions);
 
-                    }
+                    //}
 
                     return Accepted();
                 }
