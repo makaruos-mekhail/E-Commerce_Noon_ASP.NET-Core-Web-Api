@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Repository;
 using Repository.DTOs;
 using System.Reflection;
@@ -23,9 +24,22 @@ builder.Services.AddDbContext<DContext>(options =>
 
 builder.Services.AddIdentity<User, IdentityRole<long>>(options => { 
     options.SignIn.RequireConfirmedAccount = false;
- })
-    .AddEntityFrameworkStores<DContext>()
-    .AddDefaultTokenProviders();
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequiredLength = 8;
+
+    // Configure lockout settings
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+    options.Lockout.MaxFailedAccessAttempts = 5;
+   
+    // Configure user settings
+    options.User.RequireUniqueEmail = true;
+}).AddEntityFrameworkStores<DContext>()
+.AddDefaultTokenProviders();
+
+
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IBrandRepository, BrandRepository>();
