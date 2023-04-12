@@ -1,5 +1,6 @@
 ﻿using Application.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using Repository.DTOs;
 
 namespace E_Commerce_API.Controllers
 {
@@ -12,25 +13,48 @@ namespace E_Commerce_API.Controllers
 		{
 			_WishListRepository = wishListRepository;
 		}
-		[HttpGet]
-		public async Task<IActionResult> GetAllImages()
-		{
-			var wishLists = await _WishListRepository.GetAllAsync();
+        [HttpGet]
+        public async Task<IActionResult> GetAll(string userEmail)
+        {
+            var wishLists = await _WishListRepository.GetAllAsync(userEmail);
 
-			return Ok(wishLists);
-		}
-		[HttpGet("{id}")]
-		public async Task<IActionResult> GetWishListsByID(long id)
-		{
-			var wishList = await _WishListRepository.GetByIdAsync(id);
-			return Ok(wishList);
+            return Ok(wishLists);
+        }
 
-		}
-		[HttpDelete("id")]
-		public async Task<IActionResult> DeleteProductImage(long id)
-		{
-			var wishList = await _WishListRepository.DeleteAsync(id);
-			return Ok(wishList);
-		}
-	}
+
+        [HttpPost]
+        public async Task<IActionResult> AddProductToWishList([FromBody]WishlistDto wishlistDto)
+        {
+            var result = await _WishListRepository.AddProductToWishlist(wishlistDto.useremail, wishlistDto.productid);
+            return Ok(result);
+        }
+
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteProductFromWishList([FromBody] WishlistDto wishlistDto)
+        {
+            var result = await _WishListRepository.DeleteProductFromWishlist(wishlistDto.useremail, wishlistDto.productid);
+            return Ok(result);
+        }
+        //[HttpGet]
+        //public async Task<IActionResult> GetAllImages()
+        //{
+        //	var wishLists = await _WishListRepository.GetAllAsync();
+
+        //	return Ok(wishLists);
+        //}
+        //[HttpGet("{id}")]
+        //public async Task<IActionResult> GetWishListsByID(long id)
+        //{
+        //	var wishList = await _WishListRepository.GetByIdAsync(id);
+        //	return Ok(wishList);
+
+        //}
+        //[HttpDelete("id")]
+        //public async Task<IActionResult> DeleteProductImage(long id)
+        //{
+        //	var wishList = await _WishListRepository.DeleteAsync(id);
+        //	return Ok(wishList);
+        //}
+    }
 }
