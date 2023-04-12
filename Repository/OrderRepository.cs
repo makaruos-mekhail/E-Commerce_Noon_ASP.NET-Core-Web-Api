@@ -1,6 +1,7 @@
 ﻿using Application.Contracts;
 using Context;
 using Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 using Reposatory.DTOs;
 
 namespace Repository
@@ -13,9 +14,11 @@ namespace Repository
 
 		
 
-		public Task<IEnumerable<Order>> GetAllOrder()
-        {
-            IEnumerable<Order> orders = _context.Order.ToList();
+		public Task<IEnumerable<Order>> GetAllOrder(string userEmail,string status)
+		{
+            var user = _context.Users.Single(u=>u.UserName== userEmail);
+            IEnumerable<Order> orders = _context.Order.Where(o=>o.UserId==user.Id)
+				.Where(or=>or.Status== status);
             return Task.FromResult(orders);
         }
 

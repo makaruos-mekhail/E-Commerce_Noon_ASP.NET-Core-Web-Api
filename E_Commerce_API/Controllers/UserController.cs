@@ -54,12 +54,12 @@ namespace E_Commerce_API.Controllers
 
                 var result = await _userManager.CreateAsync(user,userdto.Password);
 
-                bool UserRoleIsExists = await _roleManager.RoleExistsAsync("CUSTOMER");
+                bool UserRoleIsExists = await _roleManager.RoleExistsAsync("Customer");
                 if (!UserRoleIsExists)
                 {
                     _logger.LogInformation("Adding CUSTOMER role");
 
-                    var roleResult =await _roleManager.CreateAsync(new IdentityRole<long> { Name = "CUSTOMER"});
+                    var roleResult =await _roleManager.CreateAsync(new IdentityRole<long> { Name = "Customer" });
 
                     if (!roleResult.Succeeded)
                     {
@@ -67,7 +67,7 @@ namespace E_Commerce_API.Controllers
                         return BadRequest("Error in creating CUSTOMER role");
                     }
                 }
-                await _userManager.AddToRoleAsync(user, "CUSTOMER");
+                await _userManager.AddToRoleAsync(user, "Customer");
 
                 if (!result.Succeeded)
                 {
@@ -79,8 +79,15 @@ namespace E_Commerce_API.Controllers
 
                     return BadRequest("error");
                 }
+                else
+                {
+                    WishList wishList=new WishList() {UserId= user.Id};
+                   await _context.WishList.AddAsync(wishList);
+                   await _context.SaveChangesAsync();
+                    return Ok();
+                }
 
-                return Ok();
+                
             }
             catch (Exception ex)
             {

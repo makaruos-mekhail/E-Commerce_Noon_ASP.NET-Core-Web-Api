@@ -8,9 +8,7 @@ namespace Domain.Entities
         public long Id { get; set; }
 
 		public string Address { set; get; }
-
-
-		public decimal TotalPrice { get; set; }
+    	public decimal TotalPrice { get; set; }
 
         public int? Discount { get; set; }
         public DateTime CreatedAt { get; set; }

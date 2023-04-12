@@ -34,13 +34,10 @@ namespace E_Commerce_API.Controllers
 			return Ok(order);
 
 		}
-
-
 		[HttpGet]
-		public async Task<IActionResult> GetAllOrders()
+		public async Task<IActionResult> GetAllOrders(string userEmail,string status)
 		{
-			var orders = await _iorderRepository.GetAllOrder();
-
+            var orders = await _iorderRepository.GetAllOrder(userEmail, status);
 			return Ok(orders);
 		}
 
@@ -75,8 +72,12 @@ namespace E_Commerce_API.Controllers
 				UserPhone = user.Phone,
 				User = user,
 				TotalPrice = orderDto.TotalPrice,
-				OrderItems = orderItems
-			};
+				OrderItems = orderItems,
+				Status = "Processing",
+				IsDeleted = false,
+				CreatedAt = DateTime.Now
+
+            };
 
 			 await db.AddAsync(order);
 			await db.SaveChangesAsync();
