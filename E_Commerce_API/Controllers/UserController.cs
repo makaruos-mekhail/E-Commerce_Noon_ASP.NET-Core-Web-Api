@@ -210,6 +210,20 @@ namespace E_Commerce_API.Controllers
             else
                 return BadRequest("error");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> getnameuser(string useremail)
+        {
+            var user = await _userManager.FindByEmailAsync(useremail);
+            if (user != null)
+            {
+                string fullname = user.FirstName + " " + user.LastName;
+                return Ok(fullname);
+            }
+            else
+                return BadRequest("error");
+        }
+
     }
 
 }

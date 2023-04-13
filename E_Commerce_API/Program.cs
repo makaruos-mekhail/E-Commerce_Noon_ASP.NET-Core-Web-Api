@@ -17,7 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<DContext>(options =>
     {
        // options.UseLazyLoadingProxies();
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnectionStringSleim"));
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DbContextConnectionFatmaAhmed"));
     }); 
 
 // Add services to the container.
