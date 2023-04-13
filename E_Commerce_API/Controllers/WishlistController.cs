@@ -1,4 +1,6 @@
 ﻿using Application.Contracts;
+using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repository.DTOs;
 
@@ -6,6 +8,7 @@ namespace E_Commerce_API.Controllers
 {
 	[Route("api/[controller]/[action]")]
 	[ApiController]
+    [Authorize]
 	public class WishlistController : ControllerBase
 	{
 		private readonly IWishListRepository _WishListRepository;
@@ -31,9 +34,9 @@ namespace E_Commerce_API.Controllers
 
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteProductFromWishList([FromBody] WishlistDto wishlistDto)
+        public async Task<IActionResult> DeleteProductFromWishList( string useremail ,long  productid)//[FromBody] WishlistDto wishlistDto)
         {
-            var result = await _WishListRepository.DeleteProductFromWishlist(wishlistDto.useremail, wishlistDto.productid);
+            var result = await _WishListRepository.DeleteProductFromWishlist(useremail, productid); //wishlistDto.useremail, wishlistDto.productid);
             return Ok(result);
         }
         //[HttpGet]

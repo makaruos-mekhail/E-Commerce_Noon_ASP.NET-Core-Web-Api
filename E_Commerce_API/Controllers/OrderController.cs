@@ -1,6 +1,7 @@
 ﻿using Application.Contracts;
 using Context;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Reposatory.DTOs;
@@ -12,6 +13,7 @@ namespace E_Commerce_API.Controllers
 {
 	[Route("api/[controller]/[action]")]
 	[ApiController]
+	[Authorize]
 	public class OrderController : ControllerBase
 	{
 		private readonly IOrderRepository _iorderRepository;
@@ -34,19 +36,16 @@ namespace E_Commerce_API.Controllers
 			return Ok(order);
 
 		}
-		[HttpGet]
+      
+
+        [HttpGet]
 		public async Task<IActionResult> GetAllOrders(string userEmail,string status)
 		{
-            var orders = await _iorderRepository.GetAllOrder(userEmail, status);
-			return Ok(orders);
+            var order = await _iorderRepository.GetAllOrder(userEmail, status);
+			return Ok(order);
 		}
 
-		//[HttpPost]
-		//public async Task<IActionResult> AddOrder(Order order)
-		//{
-		//	var data = await _iorderRepository.AddOreder(order);
-		//	return Ok(data);
-		//}
+	
 
 		[HttpPost]
 		public async Task<IActionResult> AddOrder(OrderDTO orderDto)

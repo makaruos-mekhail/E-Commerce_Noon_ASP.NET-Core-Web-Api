@@ -44,7 +44,7 @@ namespace Repository
         public Task<IEnumerable<Product>> GetAllAsync(string userEmail)
         {
             var user = _context.Users.Single(u => u.UserName == userEmail);
-            WishList wishList = _context.WishList.Include(p => p.Products).AsNoTracking().Single(w => w.UserId == user.Id);
+            WishList wishList = _context.WishList.Include(p => p.Products).Single(w => w.UserId == user.Id);
             IEnumerable<Product>products =wishList.Products;
             return Task.FromResult(products);
 
