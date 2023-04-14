@@ -45,7 +45,14 @@ namespace E_Commerce_API.Controllers
 			return Ok(order);
 		}
 
-	
+		////all orders
+		[HttpGet]
+		public async Task<IActionResult> GetAllUserOrders(string userEmail)
+		{
+			var orders = await _iorderRepository.GetAllUserOrders(userEmail);
+			return Ok(orders);
+		}
+
 
 		[HttpPost]
 		public async Task<IActionResult> AddOrder(OrderDTO orderDto)
@@ -89,7 +96,7 @@ namespace E_Commerce_API.Controllers
 			return await _iorderRepository.DeleteAsync(id);
 
 		}
-
+		
 
 	}
 }

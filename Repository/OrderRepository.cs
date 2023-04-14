@@ -22,8 +22,17 @@ namespace Repository
 
             return Task.FromResult(order);
         }
+        public Task<IEnumerable<Order>> GetAllUserOrders(string userEmail)
+        {
+            var user = _context.Users.Single(u => u.UserName == userEmail);
+            IEnumerable<Order> orders = _context.Order.Include(o => o.OrderItems).ThenInclude(o => o.Product).Where(o => o.UserId == user.Id)
+               .OrderByDescending(o => o.CreatedAt);
 
-        
+
+            return Task.FromResult( orders);
+        }
+
+
 
         //public Task<Order> AddOreder(OrderDTO order)
         //{
