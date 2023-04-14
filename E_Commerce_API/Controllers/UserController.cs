@@ -4,7 +4,11 @@ using Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using Repository.DTOs;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace E_Commerce_API.Controllers
 {
@@ -20,7 +24,7 @@ namespace E_Commerce_API.Controllers
         private readonly ILogger<UserController> _logger;
         private readonly IMapper _mapper;
         private readonly HttpContext _httpContext;
-
+       
         public UserController(DContext context,
             UserManager<User> userManager
             ,SignInManager<User> signInManager,
@@ -98,53 +102,188 @@ namespace E_Commerce_API.Controllers
 
         }
         [HttpPost]
-        public async Task<IActionResult> LogIn([FromBody] LoginUserDto loginUserDto)
+        public async Task<ResultModel> SignIn([FromBody] LoginUserDto model)
         {
-            _logger.LogInformation($"LogIn Attempt For {loginUserDto.Email}");
-            if (!ModelState.IsValid)
+            ResultModel myModel = new ResultModel();
+            if (ModelState.IsValid == false)
             {
-                return BadRequest(ModelState);
+                myModel.Success = false;
+                myModel.Data =
+                    ModelState.Values.SelectMany
+                            (i => i.Errors.Select(x => x.ErrorMessage));
             }
-            try
+            else
             {
+                var result
+                     = await _signInManager.PasswordSignInAsync
+                        (model.Email, model.Password ,false,false);
+                var user1 = await _userManager.FindByNameAsync(model.Email);
 
-                var result = await _signInManager
-                    .PasswordSignInAsync(loginUserDto.Email, loginUserDto.Password, false, false);
-                if (!result.Succeeded)
-
-                { 
-                    return BadRequest("error");
-                }
-                else 
+                if (user1 is null || !await _userManager.CheckPasswordAsync(user1, model.Password))
                 {
-                    var User = await _userManager.FindByEmailAsync(loginUserDto.Email);
-
-                    //if (User!=null)
-                    //{
-                    //    //var cookieOptions = new CookieOptions();
-                    //    //Response.Cookies.Append("userId", User.Id.ToString(), cookieOptions);
-                    //    var cookieOptions = new CookieOptions();
-                    //    cookieOptions.Expires = DateTime.Now.AddDays(30);
-                    //    cookieOptions.Path = "/";
-                    //    Response.Cookies.Append("userId", User.Id.ToString(), cookieOptions);
-
-                    //}
-
-                    return Accepted();
+                    myModel.Success = false;
+                    myModel.Message = "Invalid UserName Or Password .";
                 }
-                
-            }
-            catch (Exception ex)
-            {
+                else if (result.IsNotAllowed == true)
                 {
-                    _logger.LogError(ex, $"somethoing went wrong in the {nameof(LogIn)}");
-                    return Problem($"somethoing went wrong in the {nameof(LogIn)}", statusCode: 500);
-
+                    myModel.Success = false;
+                    myModel.Message = "Invalid UserName Or Password ";
+                }
+                else if (result.IsLockedOut)
+                {
+                    myModel.Success = false;
+                    myModel.Message = "Is Locked Out";
                 }
 
-            }
 
+                else
+                {
+                    var user = await _userManager.FindByNameAsync(model.Email);
+                    List<Claim> claims = new List<Claim>();
+                    var roles = await _userManager.GetRolesAsync(user);
+                    roles.ToList().ForEach(i =>
+                    {
+                        claims.Add(new Claim(ClaimTypes.Role, i));
+                    });
+
+                    JwtSecurityToken token
+                        = new JwtSecurityToken
+                        (
+                            signingCredentials:
+                             new SigningCredentials
+                             (
+                                 new SymmetricSecurityKey(Encoding.ASCII.GetBytes("IOLJYHSDSIoleJHsdsdsas98WeWsdsdQweweHgsgdf_&6#2"))
+                                 ,
+                                 SecurityAlgorithms.HmacSha256
+                             ),
+                            expires: DateTime.Now.AddDays(5),
+                            claims: claims
+                        );
+
+                    string tokenValue = new JwtSecurityTokenHandler().WriteToken(token);
+                    myModel.Success = true;
+                    myModel.Message = "Successfulyy Loged In";
+                    myModel.Data = new
+                    {
+                        User = user,
+                        Toekn = tokenValue,
+                        Roles = roles
+                    };
+                }
+            }
+            return myModel;
         }
+        //[HttpPost("login")]
+        //public async Task<IActionResult> Login([FromBody] LoginUserDto request)
+        //{
+        //    var user = await _userManager.FindByNameAsync(request.Email);
+        //    if (user == null || !await _userManager.CheckPasswordAsync(user, request.Password))
+        //    {
+        //        return Unauthorized();
+        //    }
+
+        //    var roles = await _userManager.GetRolesAsync(user);
+
+        //    var tokenHandler = new JwtSecurityTokenHandler();
+        //    var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+        //    var tokenDescriptor = new SecurityTokenDescriptor
+        //    {
+        //        Subject = new ClaimsIdentity(new[]
+        //        {
+        //    new Claim(ClaimTypes.NameIdentifier, user.Id),
+        //    new Claim(ClaimTypes.Name, user.UserName),
+        //    new Claim(ClaimTypes.Role, string.Join(",", roles)),
+        //}),
+        //        Expires = DateTime.UtcNow.AddHours(_appSettings.TokenExpirationHours),
+        //        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+        //    };
+        //    var token = tokenHandler.CreateToken(tokenDescriptor);
+
+        //    return Ok(new { token = tokenHandler.WriteToken(token) });
+        //}
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        /// 
+
+
+        //[HttpPost]
+        //public async Task<ResultModel> LogIn([FromBody] LoginUserDto loginUserDto)
+        //{
+        //    var myModel = new ResultModel();
+
+        //    _logger.LogInformation($"LogIn Attempt For {loginUserDto.Email}");
+        //    if (!ModelState.IsValid)
+        //    {
+        //        myModel.Success = false;
+        //        myModel.Data =
+        //            ModelState.Values.SelectMany
+        //                    (i => i.Errors.Select(x => x.ErrorMessage));
+
+        //        //return BadRequest(ModelState);
+        //    }
+        //    try
+        //    {
+
+        //        var result = await _signInManager
+        //            .PasswordSignInAsync(loginUserDto.Email, loginUserDto.Password, false, false);
+        //        if (!result.Succeeded)
+
+        //        {
+        //            return BadRequest("error");
+        //        }
+        //        else
+        //        {
+        //            var User = await _userManager.FindByEmailAsync(loginUserDto.Email);
+        //            List<Claim> claims = new List<Claim>();
+        //            var roles = await _userManager.GetRolesAsync(User);
+        //            roles.ToList().ForEach(i =>
+        //            {
+        //                claims.Add(new Claim(ClaimTypes.Role, i));
+        //            });
+
+        //            JwtSecurityToken token
+        //                = new JwtSecurityToken
+        //                (
+        //                    signingCredentials:
+        //                     new SigningCredentials
+        //                     (
+        //                         new SymmetricSecurityKey(Encoding.ASCII.GetBytes("IOLJYHSDSIoleJHsdsdsas98WeWsdsdQweweHgsgdf_&6#2"))
+        //                         ,
+        //                         SecurityAlgorithms.HmacSha256
+        //                     ),
+        //                    expires: DateTime.Now.AddDays(5),
+        //                    claims: claims
+        //                );
+
+        //            string tokenValue = new JwtSecurityTokenHandler().WriteToken(token);
+        //            myModel.Success = true;
+        //            myModel.Message = "Successfulyy Loged In";
+        //            myModel.Data = new
+        //            {
+        //                User = User,
+        //                Toekn = tokenValue,
+        //                Roles = roles
+        //            };
+
+
+        //            return Accepted();
+        //        }
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        {
+        //            _logger.LogError(ex, $"somethoing went wrong in the {nameof(LogIn)}");
+        //            return Problem($"somethoing went wrong in the {nameof(LogIn)}", statusCode: 500);
+
+        //        }
+
+        //    }
+
+        //}
 
         [HttpPost]
         public async Task<IActionResult> LogOut()
