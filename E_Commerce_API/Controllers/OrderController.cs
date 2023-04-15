@@ -8,7 +8,6 @@ using Reposatory.DTOs;
 using Repository.DTOs;
 using System.Collections.Generic;
 using System.Net;
-
 namespace E_Commerce_API.Controllers
 {
 	[Route("api/[controller]/[action]")]
@@ -36,8 +35,6 @@ namespace E_Commerce_API.Controllers
 			return Ok(order);
 
 		}
-      
-
         [HttpGet]
 		public async Task<IActionResult> GetAllOrders(string userEmail,string status)
 		{
@@ -58,7 +55,7 @@ namespace E_Commerce_API.Controllers
 		public async Task<IActionResult> AddOrder(OrderDTO orderDto)
 		{
             var user = await _userManager.FindByEmailAsync(orderDto.username);
-			List<OrderItems> orderItems = new List<OrderItems>();
+            List<OrderItems> orderItems = new List<OrderItems>();
 			foreach(var or in orderDto.OrderItemsDTO)
 			{
 				Product p = db.Product.Single(p => p.Id == or.productid);

@@ -41,6 +41,8 @@ namespace E_Commerce_API.Controllers
             _mapper = mapper;
         _httpContext = httpContext.HttpContext;
         }
+   
+     
         [HttpPost]
         public async Task<IActionResult> Registeration([FromBody] UserDto userdto)
         {
@@ -112,7 +114,7 @@ namespace E_Commerce_API.Controllers
      
 
         [HttpPost]
-        public async Task<ResultModel> SignIn([FromBody] LoginUserDto model)
+        public async Task<ResultModel> SignIn([FromBody]LoginUserDto model)
         {
             ResultModel myModel = new ResultModel();
             if (ModelState.IsValid == false)
@@ -226,8 +228,9 @@ namespace E_Commerce_API.Controllers
             var user = await _userManager.FindByEmailAsync(useremail);
             if (user != null)
             {
-                string fullname = user.FirstName ;
-                return Ok(fullname);
+
+              //  string fullname = user.FirstName ;
+                return Ok(user);
             }
             else
                 return BadRequest("error");
