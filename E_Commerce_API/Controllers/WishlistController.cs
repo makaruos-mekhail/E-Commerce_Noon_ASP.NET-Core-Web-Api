@@ -8,7 +8,7 @@ namespace E_Commerce_API.Controllers
 {
 	[Route("api/[controller]/[action]")]
 	[ApiController]
-    //[Authorize]
+    [Authorize]
 	public class WishlistController : ControllerBase
 	{
 		private readonly IWishListRepository _WishListRepository;

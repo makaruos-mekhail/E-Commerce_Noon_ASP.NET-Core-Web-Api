@@ -93,7 +93,12 @@ namespace E_Commerce_API.Controllers
 			return await _iorderRepository.DeleteAsync(id);
 
 		}
-		
+		[HttpPatch]
+		public async Task<bool> CancelOrder([FromBody] long id)
+		{
+			return await _iorderRepository.CancelOrder(id);
+		}
 
-	}
+
+    }
 }

@@ -6,5 +6,6 @@ namespace Application.Contracts
     {
         Task<Order> GetAllOrder(string userEmail,string status);
         Task<IEnumerable< Order>>GetAllUserOrders(string userEmail);
+        Task<bool> CancelOrder(long orderid);
     }
 }
