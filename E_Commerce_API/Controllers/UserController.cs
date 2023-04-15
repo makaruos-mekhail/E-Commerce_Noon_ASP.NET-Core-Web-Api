@@ -88,6 +88,13 @@ namespace E_Commerce_API.Controllers
                     WishList wishList=new WishList() {UserId= user.Id};
                    await _context.WishList.AddAsync(wishList);
                    await _context.SaveChangesAsync();
+                    var loginuser = new LoginUserDto()
+                    {
+                        Email = userdto.Email,
+                        Password = userdto.Password
+                    };
+                    //return RedirectToAction("SignIn",loginuser);
+                   
                     return Ok();
                 }
 
@@ -101,6 +108,9 @@ namespace E_Commerce_API.Controllers
            
 
         }
+
+     
+
         [HttpPost]
         public async Task<ResultModel> SignIn([FromBody] LoginUserDto model)
         {
@@ -144,6 +154,7 @@ namespace E_Commerce_API.Controllers
                     roles.ToList().ForEach(i =>
                     {
                         claims.Add(new Claim(ClaimTypes.Role, i));
+                  
                     });
 
                     JwtSecurityToken token
@@ -158,6 +169,7 @@ namespace E_Commerce_API.Controllers
                              ),
                             expires: DateTime.Now.AddDays(5),
                             claims: claims
+
                         );
 
                     string tokenValue = new JwtSecurityTokenHandler().WriteToken(token);
@@ -173,166 +185,24 @@ namespace E_Commerce_API.Controllers
             }
             return myModel;
         }
-        //[HttpPost("login")]
-        //public async Task<IActionResult> Login([FromBody] LoginUserDto request)
-        //{
-        //    var user = await _userManager.FindByNameAsync(request.Email);
-        //    if (user == null || !await _userManager.CheckPasswordAsync(user, request.Password))
-        //    {
-        //        return Unauthorized();
-        //    }
-
-        //    var roles = await _userManager.GetRolesAsync(user);
-
-        //    var tokenHandler = new JwtSecurityTokenHandler();
-        //    var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
-        //    var tokenDescriptor = new SecurityTokenDescriptor
-        //    {
-        //        Subject = new ClaimsIdentity(new[]
-        //        {
-        //    new Claim(ClaimTypes.NameIdentifier, user.Id),
-        //    new Claim(ClaimTypes.Name, user.UserName),
-        //    new Claim(ClaimTypes.Role, string.Join(",", roles)),
-        //}),
-        //        Expires = DateTime.UtcNow.AddHours(_appSettings.TokenExpirationHours),
-        //        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-        //    };
-        //    var token = tokenHandler.CreateToken(tokenDescriptor);
-
-        //    return Ok(new { token = tokenHandler.WriteToken(token) });
-        //}
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        /// 
-
-
-        //[HttpPost]
-        //public async Task<ResultModel> LogIn([FromBody] LoginUserDto loginUserDto)
-        //{
-        //    var myModel = new ResultModel();
-
-        //    _logger.LogInformation($"LogIn Attempt For {loginUserDto.Email}");
-        //    if (!ModelState.IsValid)
-        //    {
-        //        myModel.Success = false;
-        //        myModel.Data =
-        //            ModelState.Values.SelectMany
-        //                    (i => i.Errors.Select(x => x.ErrorMessage));
-
-        //        //return BadRequest(ModelState);
-        //    }
-        //    try
-        //    {
-
-        //        var result = await _signInManager
-        //            .PasswordSignInAsync(loginUserDto.Email, loginUserDto.Password, false, false);
-        //        if (!result.Succeeded)
-
-        //        {
-        //            return BadRequest("error");
-        //        }
-        //        else
-        //        {
-        //            var User = await _userManager.FindByEmailAsync(loginUserDto.Email);
-        //            List<Claim> claims = new List<Claim>();
-        //            var roles = await _userManager.GetRolesAsync(User);
-        //            roles.ToList().ForEach(i =>
-        //            {
-        //                claims.Add(new Claim(ClaimTypes.Role, i));
-        //            });
-
-        //            JwtSecurityToken token
-        //                = new JwtSecurityToken
-        //                (
-        //                    signingCredentials:
-        //                     new SigningCredentials
-        //                     (
-        //                         new SymmetricSecurityKey(Encoding.ASCII.GetBytes("IOLJYHSDSIoleJHsdsdsas98WeWsdsdQweweHgsgdf_&6#2"))
-        //                         ,
-        //                         SecurityAlgorithms.HmacSha256
-        //                     ),
-        //                    expires: DateTime.Now.AddDays(5),
-        //                    claims: claims
-        //                );
-
-        //            string tokenValue = new JwtSecurityTokenHandler().WriteToken(token);
-        //            myModel.Success = true;
-        //            myModel.Message = "Successfulyy Loged In";
-        //            myModel.Data = new
-        //            {
-        //                User = User,
-        //                Toekn = tokenValue,
-        //                Roles = roles
-        //            };
-
-
-        //            return Accepted();
-        //        }
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        {
-        //            _logger.LogError(ex, $"somethoing went wrong in the {nameof(LogIn)}");
-        //            return Problem($"somethoing went wrong in the {nameof(LogIn)}", statusCode: 500);
-
-        //        }
-
-        //    }
-
-        //}
+       
 
         [HttpPost]
         public async Task<IActionResult> LogOut()
         {
+
             await _signInManager.SignOutAsync();
             
             return Ok();
         }
-        //[HttpGet]
-        //public async Task<IActionResult> getUserId(string email)
-        //{
-
-        //    var User = await _userManager.FindByEmailAsync(email);
-
-        //    if (User != null)
-        //    {
-        //        return Ok(User.Id);
-
-        //    }
-        //    else
-        //    {
-        //        return BadRequest("error");
-        //    }
-
-        //User user = await _context.Users.SingleAsync(u => u.Email == email);
-        //if (user != null)
-        //{
-        //    long id = user.Id;
-        //    //return Ok( _context.Users.SingleAsync(u => u.Email == email).Id);
-        //    return id;
-        //}
-
-        //return 0;
-        //}
-
+       
         [HttpPatch]
         public async Task<IActionResult> updateUser([FromBody] checkoutDto checkoutDto)//long id,string address,string phone)
 
 
         {
            
-           // var cookie = Request.Cookies["MyCookie"];
-           //var cookie = Request.Cookies["userid"];
-           // var cookies = HttpContext.Request.Cookies;
-           // var name = HttpContext.Request.Cookies["MyCookie"];
-           // if (cookie != null)
-           // {
-               // var id = long.Parse(cookie);
-             //   var user = await _userManager.FindByIdAsync(id.ToString());
+       
                 var user = await _userManager.FindByEmailAsync(checkoutDto.useremail);
 
                 if (user != null)
@@ -356,7 +226,7 @@ namespace E_Commerce_API.Controllers
             var user = await _userManager.FindByEmailAsync(useremail);
             if (user != null)
             {
-                string fullname = user.FirstName + " " + user.LastName;
+                string fullname = user.FirstName ;
                 return Ok(fullname);
             }
             else
